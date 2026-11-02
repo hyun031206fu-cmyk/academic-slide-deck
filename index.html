@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>학술제 발표 | 단과대학 건물 인프라 차이와 학생의 만족도·삶의 질</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/anime.min.js"></script>
+</head>
+<body>
+
+  <!-- 상단 프로그레스 바 -->
+  <div id="progress-bar-container">
+    <div id="progress-bar"></div>
+  </div>
+
+  <!-- 슬라이드덱 컨테이너 (16:9 비율) -->
+  <main id="presentation-deck">
+
+    <!-- ==========================================================================
+         Slide 01: 발표 표지 (Title Slide)
+         ========================================================================== -->
+    <section class="slide active" data-slide="1" style="justify-content: center; align-items: center; text-align: center;">
+      <div class="slide-tag" style="font-size: 0.95rem; margin-bottom: 12px;">2026 Academic Research Symposium &bull; 사회과학 학술제</div>
+      <h1 class="slide-title" style="font-size: 2.8rem; line-height: 1.3; max-width: 1050px; margin-bottom: 16px; background: linear-gradient(135deg, #ffffff 40%, var(--sns-blue) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        단과대학 건물 인프라 차이와 학생의 만족도·삶의 질
+      </h1>
+      <p style="font-size: 1.3rem; color: var(--text-secondary); margin-bottom: 32px; font-weight: 500;">
+        ‘건물은 학생을 만드는가’: 부산대학교 생물관과 경제통상관 비교
+      </p>
+
+      <div style="display: flex; gap: 28px; background: rgba(30, 41, 59, 0.65); padding: 14px 32px; border-radius: 40px; border: 1px solid var(--border-color); font-size: 0.95rem;">
+        <div>소속: <strong>부산대학교 사회과학대학 사회학과</strong></div>
+        <div style="color: rgba(255,255,255,0.2);">|</div>
+        <div>연구진: <strong>학술제 연구팀</strong></div>
+        <div style="color: rgba(255,255,255,0.2);">|</div>
+        <div>연구 설계: <strong>순차적 혼합방법 연구 (Mixed Methods)</strong></div>
+      </div>
+
+      <div class="slide-footer" style="position: absolute; bottom: 24px; left: 56px; right: 56px;">
+        <span>Differences in College Building Infrastructure & Students' Well-Being</span>
+        <span class="slide-number">1 / 15</span>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Slide 02: 연구 배경 및 문제 제기 (Background & Context)
+         ========================================================================== -->
+    <section class="slide" data-slide="2">
+      <header class="slide-header">
+        <div>
+          <div class="slide-tag">Ⅰ. 서론 &bull; 연구 배경</div>
+          <h2 class="slide-title">같은 대학, 같은 등록금, 그러나 너무나 다른 공간</h2>
+        </div>
+        <div class="slide-category">RESEARCH BACKGROUND</div>
+      </header>
+
+      <div class="slide-body">
+        <div class="grid-2">
+          <!-- 왼쪽: 처칠 명언 & 핵심 철학 -->
+          <div class="card" style="justify-content: center; background: linear-gradient(145deg, #1e293b, #0f172a);">
+            <div style="font-size: 2.4rem; color: var(--sns-blue); line-height: 1; margin-bottom: 12px;">“</div>
+            <p style="font-size: 1.35rem; line-height: 1.6; font-weight: 600; color: #fff; margin-bottom: 14px;">
+              우리가 건물을 만들지만,<br>그 뒤에는 건물이 우리를 만든다.<sup class="ref-badge" data-ref="Ref-01">[1]</sup>
+            </p>
+            <p style="font-size: 0.9rem; color: var(--text-muted); font-style: italic;">
+              — Winston Churchill (1943), 영국 의사당 재건 연설
+            </p>
+            <div style="margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border-color); font-size: 0.92rem; line-height: 1.6; color: var(--text-secondary);">
+              대학 건물은 수업만 듣는 곳이 아니라 공강을 보내고, 과제를 하며, 동료를 만나는 <strong>일상의 생활 공간</strong>입니다.
+            </div>
+          </div>
+
+          <!-- 오른쪽: 두 단과대학의 현실 대비 -->
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div class="card" style="border-left: 4px solid var(--sns-coral);">
+              <div class="card-title" style="color: var(--sns-coral);">
+                <span>사회과학대학 (임시 공간)</span>
+                <span style="font-size: 0.8rem; background: rgba(251, 146, 60, 0.2); padding: 2px 8px; border-radius: 4px;">생물관</span>
+              </div>
+              <p class="card-body">
+                2026년 2학기 현재 사회관 재건축 공사로 인해 <strong>1980년 준공(46년 경과)</strong>된 자연과학 계열 건물의 일부 층(3~4층)을 빌려 쓰는 상황.
+              </p>
+            </div>
+
+            <div class="card" style="border-left: 4px solid var(--sns-blue);">
+              <div class="card-title" style="color: var(--sns-blue);">
+                <span>경제통상대학 (독립 단과대)</span>
+                <span style="font-size: 0.8rem; background: rgba(56, 189, 248, 0.2); padding: 2px 8px; border-radius: 4px;">경제통상관</span>
+              </div>
+              <p class="card-body">
+                같은 사회과학 계열이면서 <strong>2013년 준공(13년 경과)</strong>된 현대식 자기 단과대학 독립 건물을 안정적으로 사용 중.
+              </p>
+            </div>
+
+            <div class="card" style="background: rgba(30, 41, 59, 0.4); border-style: dashed;">
+              <p style="font-size: 0.9rem; color: #e2e8f0; line-height: 1.5;">
+                🔍 <strong>핵심 연구 문제:</strong> 학문 분야가 가장 유사한 두 단과대학의 극단적 인프라 격차가 학생의 <strong>시설 만족, 대학생활 만족, 나아가 삶의 질</strong>에 실질적인 영향을 미치는가?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <div class="footnote-list">
+          <div class="footnote-item" data-ref="Ref-01">
+            <span class="badge">[1]</span> Churchill, W. (1943). House of Commons Rebuilding. Hansard, vol. 393, col. 403.
+          </div>
+        </div>
+        <span class="slide-number">2 / 15</span>
+      </footer>
+    </section>
+
+    <!-- ==========================================================================
+         Slide 03: 이론적 배경 및 선행연구 (Theoretical Framework)
+         ========================================================================== -->
+    <section class="slide" data-slide="3">
+      <header class="slide-header">
+        <div>
+          <div class="slide-tag">Ⅱ. 이론적 배경</div>
+          <h2 class="slide-title">공간, 거주자 평가, 그리고 심리적 메커니즘</h2>
+        </div>
+        <div class="slide-category">LITERATURE REVIEW</div>
+      </header>
+
+      <div class="slide-body">
+        <div class="grid-3">
+          <!-- 축 1: 대학 시설과 만족 -->
+          <div class="card">
+            <div class="card-title" style="color: var(--sns-blue);">
+              <span>1. 시설과 학생 만족</span>
+            </div>
+            <p class="card-body" style="margin-bottom: 14px;">
+              대학 시설은 대학생활 만족에 직접적 영향을 미치며(β = .266), 자부심과 소속감을 매개합니다<sup class="ref-badge" data-ref="Ref-02">[2]</sup><sup class="ref-badge" data-ref="Ref-03">[3]</sup>. 특히 신입생의 소속감 형성에 물리적 환경이 핵심적입니다<sup class="ref-badge" data-ref="Ref-04">[4]</sup>.
+            </p>
+            <div style="background: rgba(0,0,0,0.25); padding: 10px; border-radius: 6px; font-size: 0.82rem; color: var(--text-secondary);">
+              <strong>기존 연구의 한계:</strong> 학생 주관적 평가에만 의존하여 실제 시설 차이인지 응답자 성향인지 구분이 어려움.
+            </div>
+          </div>
+
+          <!-- 축 2: 거주후평가 (POE) -->
+          <div class="card">
+            <div class="card-title" style="color: var(--sns-purple);">
+              <span>2. 거주후평가 (POE)</span>
+            </div>
+            <p class="card-body" style="margin-bottom: 14px;">
+              물리적 환경의 객관적 성능과 재실자의 심리적 반응을 체계적으로 결합 측정하는 방법론입니다<sup class="ref-badge" data-ref="Ref-08">[8]</sup>. 임시 교사에서도 실내 공기질, 소음, 냄새가 만족을 좌우합니다<sup class="ref-badge" data-ref="Ref-09">[9]</sup>.
+            </p>
+            <div style="background: rgba(0,0,0,0.25); padding: 10px; border-radius: 6px; font-size: 0.82rem; color: var(--text-secondary);">
+              <strong>본 연구의 접근:</strong> 연구진의 직접 실측(14개 지표)과 학생 설문·인터뷰를 나란히 대조.
+            </div>
+          </div>
+
+          <!-- 축 3: 장소 애착 & 박탈감 -->
+          <div class="card">
+            <div class="card-title" style="color: var(--sns-coral);">
+              <span>3. 장소 애착과 박탈감</span>
+            </div>
+            <p class="card-body" style="margin-bottom: 14px;">
+              공간에 대한 인식은 물리적 조건뿐 아니라 ‘우리 공간’이라는 소속감과 누구와 만나는지에 좌우됩니다<sup class="ref-badge" data-ref="Ref-10">[10]</sup>. 준거집단과의 비교는 상대적 박탈감을 낳습니다<sup class="ref-badge" data-ref="Ref-12">[12]</sup>.
+            </p>
+            <div style="background: rgba(0,0,0,0.25); padding: 10px; border-radius: 6px; font-size: 0.82rem; color: var(--text-secondary);">
+              <strong>빌려 쓰는 공간:</strong> 기숙사 등에서 휴식 공간 부재 시 학생들은 자리를 피하고 애착이 약화됨<sup class="ref-badge" data-ref="Ref-11">[11]</sup>.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <div class="footnote-list">
+          <div class="footnote-item" data-ref="Ref-02"><span class="badge">[2]</span> 김인숙·정주영 (2010)</div>
+          <div class="footnote-item" data-ref="Ref-03"><span class="badge">[3]</span> Kim & Chu (2024)</div>
+          <div class="footnote-item" data-ref="Ref-08"><span class="badge">[8]</span> Preiser et al. (1988)</div>
+          <div class="footnote-item" data-ref="Ref-10"><span class="badge">[10]</span> Scannell & Gifford (2010)</div>
+          <div class="footnote-item" data-ref="Ref-12"><span class="badge">[12]</span> Runciman (1966)</div>
+        </div>
+        <span class="slide-number">3 / 15</span>
+      </footer>
+    </section>
+
+    <!-- ==========================================================================
+         Slide 04: 연구 가설 및 연구 모델 (Figure 1: Research Model)
+         ========================================================================== -->
+    <section class="slide" data-slide="4">
+      <header class="slide-header">
+        <div>
+          <div class="slide-tag">Ⅱ. 가설 설정 &bull; Figure 1</div>
+          <h2 class="slide-title">연구 모형 및 핵심 가설 체계</h2>
+        </div>
+        <div class="slide-category">RESEARCH MODEL & HYPOTHESES</div>
+      </header>
+
+      <div class="slide-body">
+        <div class="grid-2">
+          <!-- 왼쪽: 연구 모형 다이어그램 (Seaborn 모던 플로우) -->
+          <div class="card" style="justify-content: space-around; background: #0b1120;">
+            <div style="text-align: center; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 4px;">
+              [Figure 1] 사전 등록된 연구 모형 (Research Model)
+            </div>
+
+            <!-- 인과 사슬 플로우 -->
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+              <div class="card" style="flex: 1; padding: 12px; text-align: center; border-color: var(--sns-blue);">
+                <div style="font-size: 0.75rem; color: var(--sns-blue);">원인 변수</div>
+                <div style="font-weight: 700; font-size: 0.95rem;">건물 인프라</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">실측 14개 지표</div>
+              </div>
+              <div style="color: var(--sns-blue); font-weight: 800;">➔</div>
+              <div class="card" style="flex: 1; padding: 12px; text-align: center; border-color: var(--sns-blue);">
+                <div style="font-size: 0.75rem; color: var(--sns-blue);">H1-1</div>
+                <div style="font-weight: 700; font-size: 0.95rem;">시설 만족</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">7개 문항 (α=.89)</div>
+              </div>
+              <div style="color: var(--sns-purple); font-weight: 800;">➔</div>
+              <div class="card" style="flex: 1; padding: 12px; text-align: center; border-color: var(--sns-purple);">
+                <div style="font-size: 0.75rem; color: var(--sns-purple);">H1-2</div>
+                <div style="font-weight: 700; font-size: 0.95rem;">대학생활 만족</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">3개 문항 (α=.82)</div>
+              </div>
+              <div style="color: var(--sns-purple); font-weight: 800;">➔</div>
+              <div class="card" style="flex: 1; padding: 12px; text-align: center; border-color: var(--sns-purple);">
+                <div style="font-size: 0.75rem; color: var(--sns-purple);">H1-3</div>
+                <div style="font-weight: 700; font-size: 0.95rem;">삶의 만족</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">SWLS (α=.81)<sup class="ref-badge" data-ref="Ref-13">[13]</sup></div>
+              </div>
+            </div>
+
+            <!-- 하단 감쇠 및 통제 장치 -->
+            <div style="background: rgba(255,255,255,0.03); border: 1px dashed var(--border-color); border-radius: 8px; padding: 12px;">
+              <div style="font-size: 0.82rem; font-weight: 700; color: var(--sns-green); margin-bottom: 6px;">
+                📉 감쇠 가설: 집단 차이는 시설 ➔ 대학생활 ➔ 삶의 만족으로 갈수록 축소될 것이다.
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-muted);">
+                <span>조절 변수: 건물 수업 과목 수 (H2)</span>
+                <span>부정 대조군: 학과 요소 만족 (H3)</span>
+                <span>블라인드: 사진 평가 (H4)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 오른쪽: 가설 목록 상세 -->
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div class="card" style="padding: 14px;">
+              <div style="font-weight: 700; font-size: 0.95rem; color: #fff;">
+                <strong>H1. 주효과 가설</strong> (실측 우위: 경제통상관)
+              </div>
+              <ul style="font-size: 0.85rem; color: var(--text-secondary); margin-left: 18px; line-height: 1.5; margin-top: 4px;">
+                <li><strong>H1-1:</strong> 시설 만족은 경통관 이용 집단이 생물관보다 높을 것이다.</li>
+                <li><strong>H1-2:</strong> 대학생활 만족은 경통관 집단이 생물관보다 높을 것이다.</li>
+                <li><strong>H1-3:</strong> 삶의 만족은 경통관 집단이 생물관보다 높을 것이다.</li>
+              </ul>
+            </div>
+
+            <div class="card" style="padding: 14px;">
+              <div style="font-weight: 700; font-size: 0.95rem; color: #fff;">
+                <strong>H2 & H3. 조절 및 타당성 검증 가설</strong>
+              </div>
+              <ul style="font-size: 0.85rem; color: var(--text-secondary); margin-left: 18px; line-height: 1.5; margin-top: 4px;">
+                <li><strong>H2 (노출 조절):</strong> 해당 건물에서 듣는 수업이 많을수록 시설 만족 차이가 커질 것이다.</li>
+                <li><strong>H3 (부정 대조군):</strong> 건물과 무관한 학과 요소(강의 질, 커리큘럼, 진로)에 대한 만족도 차이는 시설 만족 차이보다 작을 것이다.</li>
+                <li><strong>H4 (블라인드 평가):</strong> 건물명을 가린 사진 평가에서도 경통관이 높게 평가될 것이다.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <div class="footnote-list">
+          <div class="footnote-item" data-ref="Ref-13"><span class="badge">[13]</span> Diener et al. (1985). Satisfaction With Life Scale (SWLS).</div>
+          <div class="footnote-item" data-ref="Ref-14"><span class="badge">[14]</span> 임영진 (2012). 한국판 삶의 만족도 척도의 신뢰도와 타당도.</div>
+        </div>
+        <span class="slide-number">4 / 15</span>
+      </footer>
+    </section>
+
+    <!-- ==========================================================================
+         Slide 05: 연구 방법 및 표본 설계 (Methodology & Preregistration)
+         ========================================================================== -->
+    <section class="slide" data-slide="5">
+      <header class="slide-header">
+        <div>
+          <div class="slide-tag">Ⅲ. 연구 방법</div>
+          <h2 class="slide-title">사전 등록 기반 순차적 혼합방법 연구 설계</h2>
+        </div>
+        <div class="slide-category">MIXED METHODS DESIGN</div>
+      </header>
+
+      <div class="slide-body">
+        <div class="grid-3">
+          <!-- Step 1: 건물 실측 -->
+          <div class="card">
+            <div style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--sns-blue);">PHASE 01 &bull; 10/1~10/2</div>
+            <div class="card-title">객관적 건물 실측</div>
+            <ul style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-left: 16px;">
+              <li><strong>측정 대상:</strong> 공용 공간(출입구, 로비, 화장실, 휴게실) 및 대표 배정 강의실 9실</li>
+              <li><strong>3대 영역 17개 지표:</strong> 건물 기반·접근성, 학습·휴게 공간, 위생·편의</li>
+              <li><strong>판정 규칙:</strong> 결측 지표 제외 14개 지표 대상 상대 점수 산출</li>
+            </ul>
+          </div>
+
+          <!-- Step 2: 설문 조사 -->
+          <div class="card">
+            <div style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--sns-purple);">PHASE 02 &bull; 10/8~11/1</div>
+            <div class="card-title">학부생 설문조사</div>
+            <ul style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-left: 16px;">
+              <li><strong>최종 표본:</strong> 총 83명 (사회과학대 46명, 경제통상대 37명)</li>
+              <li><strong>순서 편향 방지:</strong> 삶의 만족 ➔ 대학생활 ➔ 건물 시설 순서로 문항 배치</li>
+              <li><strong>분석 방법:</strong> Welch t-test, Mann-Whitney U, Holm 보정, <strong>TOST 등가성 검정</strong></li>
+            </ul>
+          </div>
+
+          <!-- Step 3: 심층 인터뷰 -->
+          <div class="card">
+            <div style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--sns-coral);">PHASE 03 &bull; 10/29~10/30</div>
+            <div class="card-title">1:1 심층 인터뷰</div>
+            <ul style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-left: 16px;">
+              <li><strong>참여자:</strong> 6명 (생물관 주 이용자 S1~S3, 경통관 주 이용자 E1~E3)</li>
+              <li><strong>분석 방법:</strong> 클로바노트 전사 및 Braun & Clarke(2006)<sup class="ref-badge" data-ref="Ref-15">[15]</sup> 주제 분석</li>
+              <li><strong>목적:</strong> 설문 결과의 이유와 일상적 대처 방식의 질적 규명</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 하단: 연구 윤리 및 엄격성 강조 바 -->
+        <div class="card" style="margin-top: 16px; padding: 12px 20px; background: rgba(30, 41, 59, 0.4); flex-direction: row; justify-content: space-between; align-items: center;">
+          <div style="font-size: 0.88rem; color: #fff;">
+            🛡️ <strong>사전 연구계획서(Pre-registration) 확정:</strong> 가설, 제외 규칙, 판정 기준을 응답 확인 전(10월 6일) 고정하여 보고 편향 방지
+          </div>
+          <div style="font-size: 0.8rem; color: var(--sns-green); font-family: var(--font-mono);">
+            [부록 C 변경 기록 투명 공개]
+          </div>
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <div class="footnote-list">
+          <div class="footnote-item" data-ref="Ref-15"><span class="badge">[15]</span> Braun & Clarke (2006). Using Thematic Analysis in Psychology. Qual. Res. Psychol.</div>
+        </div>
+        <span class="slide-number">5 / 15</span>
+      </footer>
+    </section>
+
+    <!-- ==========================================================================
+         Slide 06: 비교 대상 개요 (Table 1: Overview of Two Buildings)
+         ========================================================================== -->
+    <section class="slide" data-slide="6">
+      <header class="slide-header">
+        <div>
+          <div class="slide-tag">Ⅲ. 비교 사례 &bull; Table 1</div>
+          <h2 class="slide-title">생물관(사회대 임시) vs 경제통상관(경통대) 기본 개요</h2>
+        </div>
+        <div class="slide-category">CASE OVERVIEW</div>
+      </header>
+
+      <div class="slide-body">
+        <div class="grid-2">
+          <!-- Table 1 데이터 카드 -->
+          <div class="card" style="padding: 0; overflow: hidden;">
+            <div style="background: rgba(255,255,255,0.05); padding: 14px 20px; font-weight: 700; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between;">
+              <span>&lt;Table 1&gt; Overview of the Two Buildings</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">2026년 10월 기준</span>
+            </div>
+            <div style="padding: 16px 20px; display: flex; flex-direction: column; gap: 12px; font-size: 0.92rem;">
+              <div style="display: grid; grid-template-columns: 140px 1fr 1fr; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-muted); font-size: 0.82rem;">
+                <div>구분</div><div>생물관 (사회과학대)</div><div>경제통상관 (경제통상대)</div>
+              </div>
+              <div style="display: grid; grid-template-columns: 140px 1fr 1fr; align-items: center;">
+                <div style="font-weight: 600;">사용 형태</div>
+                <div style="color: var(--sns-coral);">재건축 기간 임시 사용</div>
+                <div style="color: var(--sns-blue);">자기 단과대학 전용 건물</div>
+              </div>
+              <div style="display: grid; grid-template-columns: 140px 1fr 1fr; align-items: center;">
+                <div style="font-weight: 600;">준공 연도 (연식)</div>
+                <div>1980년 (<strong style="color: var(--sns-coral);">46년</strong>)</div>
+                <div>2013년 (<strong style="color: var(--sns-blue);">13년</strong>)</div>
+              </div>
+              <div style="display: grid; grid-template-columns: 140px 1fr 1fr; align-items: center;">
+                <div style="font-weight: 600;">규모 (층수/면적)</div>
+                <div>지상 5층 / 8,201㎡</div>
+                <div>지상 9층 / 9,471㎡</div>
+              </div>
+              <div style="display: grid; grid-template-columns: 140px 1fr 1fr; align-items: center;">
+                <div style="font-weight: 600;">정상 가동 승강기</div>
+                <div><strong style="color: var(--sns-coral);">1대</strong></div>
+                <div><strong style="color: var(--sns-blue);">3대</strong></div>
+              </div>
+              <div style="display: grid; grid-template-columns: 140px 1fr 1fr; align-items: center;">
+                <div style="font-weight: 600;">측정 강의실 수</div>
+                <div>4실 (401&bull;416&bull;418&bull;420호)</div>
+                <div>5실 (301&bull;302&bull;303&bull;307&bull;512호)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 선정 이유 & 맥락 카드 -->
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <div class="card" style="flex: 1;">
+              <div class="card-title">사례 비교 선정의 4대 타당성</div>
+              <ul style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin-left: 18px;">
+                <li><strong>전공 계열의 동질성:</strong> 두 단과대 모두 사회과학 계열로 전공 특성에 따른 왜곡 최소화</li>
+                <li><strong>건물 조건의 극명한 대비:</strong> 46년 노후 건물 vs 13년 신축 건물</li>
+                <li><strong>생활 동선의 집중성:</strong> 경통대 100%, 사회대 89%가 해당 건물에서 전공 수업 집중 이수</li>
+                <li><strong>학생들의 실제 준거집단:</strong> 사회대 학생들은 복수전공 및 지리적 인접성으로 경통관을 이미 자연스러운 비교 기준으로 인식</li>
+              </ul>
+            </div>
+
+            <div class="card" style="padding: 12px 16px; background: rgba(56, 189, 248, 0.08); border-color: rgba(56, 189, 248, 0.3);">
+              <p style="font-size: 0.85rem; color: #e2e8f0;">
+                💡 <strong>핵심 포인트:</strong> 생물관의 불만 요인에는 건물의 노후도뿐 아니라 ‘남의 건물을 빌려 쓰는 상황’이 복합적으로 작용함.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <div>출처: 연구진 현장 실측 조사 자료 (2026년 10월)</div>
+        <span class="slide-number">6 / 15</span>
+      </footer>
+    </section>
+
+    <!-- ==========================================================================
+         Slide 07: [Figure 2 & Table 2] 인프라 실측 비교 (Seaborn Horizon Bar Motion)
+         ========================================================================== -->
+    <section class="slide" data-slide="7">
+      <header class="slide-header">
+        <div>
+          <div class="slide-tag">Ⅳ. 연구 결과 1 &bull; Figure 2 & Table 2</div>
+          <h2 class="slide-title">객관적 건물 인프라 실측: 상대 점수 비교</h2>
+        </div>
+        <div class="slide-category">INFRASTRUCTURE MEASUREMENT</div>
+      </header>
+
+      <div class="slide-body">
+        <!-- 범례 -->
+        <div class="sns-legend">
+          <span>기준: 두 건물 평균 = 1.00</span>
+          <div class="legend-item"><span class="legend-chip" style="background: var(--sns-coral);"></span> 생물관 (사회과학대)</div>
+          <div class="legend-item"><span class="legend-chip" style="background: var(--sns-blue);"></span> 경제통상관 (경제통상대)</div>
+        </div>
+
+        <div class="grid-2">
+          <!-- 좌측: 3대 영역 및 종합 상대 점수 가로 바 모션 차트 -->
+          <div class="card" style="justify-content: space-around;">
+            
+            <!-- 영역 1: 건물 기반·접근성 -->
+            <div class="sns-bar-group">
+              <div class="sns-bar-header">
+                <span>① 건물 기반 &bull; 접근성</span>
+                <span>0.74 vs 1.26</span>
+              </div>
+              <div class="sns-bar-track">
+                <div class="sns-bar-fill coral" data-target-width="47%">0.74</div>
+              </div>
+              <div class="sns-bar-track">
+                <div class="sns-bar-fill blue" data-target-width="80%">1.26</div>
+              </div>
+            </div>
+
+            <!-- 영역 2: 학습·휴게 공간 (가장 극심한 차이) -->
+            <div class="sns-bar-group">
+              <div class="sns-bar-header">
+                <span>② 학습 &bull; 휴게 공간 (최대 격차 영역)</span>
+                <span>0.66 vs 1.34</span>
+              </div>
+              <div class="sns-bar-track">
+                <div class="sns-bar-fill coral" data-target-width="42%">0.66</div>
+              </div>
+              <div class="sns-bar-track">
+                <div class="sns-bar-fill blue" data-target-width="85%">1.34</div>
+              </div>
+            </div>
+
+            <!-- 영역 3: 위생·편의 (거의 동일) -->
+            <div class="sns-bar-group">
+              <div class="sns-bar-header">
+                <span>③ 위생 &bull; 편의 (실측 대등)</span>
+                <span>1.01 vs 0.99</span>
+              </div>
+              <div class="sns-bar-track">
+                <div class="sns-bar-fill coral" data-target-width="64%">1.01</div>
+              </div>
+              <div class="sns-bar-track">
+                <div class="sns-bar-fill blue" data-target-width="63%">0.99</div>
+              </div>
+            </div>
+
+            <!-- 종합 상대 점수 -->
+            <div class="sns-bar-group" style="padding-top: 8px; border-top: 1px dashed var(--border-color);">
+              <div class="sns-bar-header" style="font-weight: 800; font-size: 0.95rem;">
+                <span>종합 상대 점수 (지표별 승패: 4승 vs 8승)</span>
+                <span>0.80 vs 1.20</span>
+              </div>
+              <div class="sns-bar-track" style="height: 26px;">
+                <div class="sns-bar-fill coral" data-target-width="51%">0.80</div>
+              </div>
+              <div class="sns-bar-track" style="height: 26px;">
+                <div class="sns-bar-fill blue" data-target-width="76%">1.20</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 우측: 핵심 지표 실측치 하이라이트 카드 -->
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div class="card" style="flex: 1;">
+              <div class="card-title">세부 실측 지표의 현격한 격차</div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 6px;">
+                <div style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 8px;">
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">강의실 좌석당 콘센트</div>
+                  <div class="stat-metric blue" data-count-to="0.14" data-decimals="2" data-suffix="개">0.00개</div>
+                  <div style="font-size: 0.75rem; color: var(--sns-coral);">생물관: 0.05개 (경통관의 1/3)</div>
+                </div>
+
+                <div style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 8px;">
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">층당 실내 휴게 좌석</div>
+                  <div class="stat-metric blue" data-count-to="6.2" data-decimals="1" data-suffix="석">0.0석</div>
+                  <div style="font-size: 0.75rem; color: var(--sns-coral);">생물관: 1.8석 (3.4배 차이)</div>
+                </div>
+              </div>
+              <p style="font-size: 0.84rem; color: var(--text-secondary); margin-top: 12px; line-height: 1.5;">
+                📌 <strong>실측 결론:</strong> 학습·휴게 공간에서 압도적인 차이가 확인됨. 반면 위생·편의는 생물관의 정수기 대수(2대 vs 1대)와 흡연 관리 점수로 인해 실측 점수는 거의 동등하게 나타남.
+              </p>
+            </div>
+
+            <div class="card" style="padding: 10px 16px; background: rgba(52, 211, 153, 0.08); border-color: rgba(52, 211, 153, 0.3);">
+              <div style="font-size: 0.82rem; color: #e2e8f0;">
+                ✓ <strong>강건성 검증:</strong> 14개 지표를 하나씩 빼고 재계산해도 14번 모두 경통관이 0.26~0.53점 앞서 우위 판정 불변.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <div>단위: 두 건물 평균 1.00 기준 상대 점수 | 실측 대상 지표 14개</div>
+        <span class="slide-number">7 / 15</span>
+      </footer>
+    </section>
+
+    <!-- ==========================================================================
+         Slide 08: [Table 4 & Figure 3] 가설 검정 및 효과 크기 (Seaborn Forest Plot Motion)
+         ========================================================================== -->
+    <section class="slide" data-slide="8">
+      <header class="slide-header">
+        <div>
+          <div class="slide-tag">Ⅳ. 연구 결과 2 &bull; Table 4 & Figure 3</div>
+          <h2 class="slide-title">가설 검정: 시설 격차는 삶의 만족으로 번지지 않았다</h2>
+        </div>
+        <div class="slide-category">HYPOTHESIS TESTS (FOREST PLOT)</div>
+      </header>
+
+      <div class="slide-body">
+        <div class="grid-2">
+          <!-- 좌측: Seaborn 스타일 Forest Plot (에러바 + 포인트 애니메이션) -->
+          <div class="forest-plot-container">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span style="font-size: 0.85rem; font-weight: 700; color: #fff;">[Figure 3] 효과 크기(Hedges’ g) 및 95% 신뢰구간</span>
+              <span style="font-size: 0.75rem; color: var(--sns-red); font-family: var(--font-mono);">기준선: g = 0 (차이 없음)</span>
+            </div>
+
+            <div style="position: relative; flex: 1; display: flex; flex-direction: column; justify-content: space-around;">
+              <!-- g = 0 세로 기준선 -->
+              <div class="forest-zero-line"></div>
+
+              <!-- H1-1: 시설 만족 -->
+              <div class="forest-row">
+                <div class="forest-label">
+                  <div style="color: #fff;">시설 만족 (H1-1)</div>
+                  <div style="font-size: 0.72rem; color: var(--sns-green);">✓ 지지 (p &lt; .001)</div>
+                </div>
+                <div class="forest-axis-wrap">
+                  <!-- g=1.45, 95% CI [0.98, 2.05] -->
+                  <div class="forest-error-bar" style="left: 60%; width: 28%;"></div>
+                  <div class="forest-point" style="left: 74%;"></div>
+                </div>
+                <div class="forest-val-text">
+                  <strong>g = 1.45</strong><br>[0.98, 2.05]
+                </div>
+              </div>
+
+              <!-- H1-2: 대학생활 만족 -->
+              <div class="forest-row">
+                <div class="forest-label">
+                  <div style="color: #fff;">대학생활 만족 (H1-2)</div>
+                  <div style="font-size: 0.72rem; color: var(--sns-coral);">✕ 기각 (등가 p=.030)</div>
+                </div>
+                <div class="forest-axis-wrap">
+                  <!-- g=0.09, 95% CI [-0.33, 0.50] -->
+                  <div class="forest-error-bar" style="left: 26%; width: 22%; background: #64748b;"></div>
+                  <div class="forest-point insignificant" style="left: 37%;"></div>
+                </div>
+                <div class="forest-val-text">
+                  g = 0.09<br>[-0.33, 0.50]
+                </div>
+              </div>
+
+              <!-- H1-3: 삶의 만족 (SWLS) -->
+              <div class="forest-row">
+                <div class="forest-label">
+                  <div style="color: #fff;">삶의 만족 (H1-3)</div>
+                  <div style="font-size: 0.72rem; color: var(--sns-coral);">✕ 기각 (p = .334)</div>
+                </div>
+                <div class="forest-axis-wrap">
+                  <!-- g=0.30, 95% CI [-0.12, 0.73] -->
+                  <div class="forest-error-bar" style="left: 32%; width: 23%; background: #64748b;"></div>
+                  <div class="forest-point insignificant" style="left: 43%;"></div>
+                </div>
+                <div class="forest-val-text">
+                  g = 0.30<br>[-0.12, 0.73]
+                </div>
+              </div>
+
+              <!-- H3: 학과 요소 (부정 대조군) -->
+              <div class="forest-row">
+                <div class="forest-label">
+                  <div style="color: #fff;">학과 요소 만족 (H3)</div>
+                  <div style="font-size: 0.72rem; color: var(--sns-green);">✓ 지지 (등가 p=.015)</div>
+                </div>
+                <div class="forest-axis-wrap">
+                  <!-- g=0.01, 95% CI [-0.43, 0.44] -->
+                  <div class="forest-error-bar" style="left: 24%; width: 23%; background: #64748b;"></div>
+                  <div class="forest-point insignificant" style="left: 35.3%;"></div>
+                </div>
+                <div class="forest-val-text">
+                  g = 0.01<br>[-0.43, 0.44]
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 우측: 분석 결과 통계적 의미 카드 -->
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div class="card" style="flex: 1;">
+              <div class="card-title">통계적 판정 및 시사점</div>
+              <ul style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin-left: 18px;">
+                <li><strong>시설 만족 격차 극심:</strong> 경통대 4.97점 vs 사회대 3.44점 (1.52점 차이, g = 1.45)으로 H1-1 강력 지지.</li>
+                <li><strong>대학생활 만족의 실질적 등가:</strong> TOST 등가성 검정(±0.5 범위) 결과 <strong>실질적으로 같음</strong>으로 판정됨 (p = .030).</li>
+                <li><strong>감쇠(Attenuation) 가설 확인:</strong> g(시설) - g(삶)의 95% CI [0.54, 1.85]로 0을 포함하지 않아 <strong>차이가 명확히 감쇠</strong>됨.</li>
+                <li><strong>부정 대조군(H3) 일치:</strong> 교수 강의 질·교육과정 만족은 4.75 vs 4.74로 동일하여, 사회대 학생들의 불만이 학과 전반에 대한 것이 아님을 입증.</li>
+              </ul>
+            </div>
+
+            <div class="card" style="padding: 10px 14px; background: rgba(56, 189, 248, 0.08); border-color: rgba(56, 189, 248, 0.25);">
+              <p style="font-size: 0.82rem; color: #e2e8f0;">
+                🤔 <strong>핵심 질문:</strong> 왜 시설 격차가 이렇게 심한데도 대학생활 만족과 삶의 만족에는 차이가 없었을까? ➔ <strong>다음 장에서 규명</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <div>표본: 경통대 n = 37, 사회대 n = 46 (총 83명) | 부트스트랩 5,000회 재표집 95% CI</div>
+        <span class="slide-number">8 / 15</span>
+      </footer>
+    </section>
+
+    <!-- ==========================================================================
+         Slide 09: [Figure 4 & Table 6] 체감 격차와 소속감 매개 (Seaborn Mediation)
+         ========================================================================== -->
+    <section class="slide" data-slide="9">
+      <header class="slide-header">
+        <div>
+          <div class="slide-tag">Ⅳ. 연구 결과 3 &bull; Figure 4 & Table 6</div>
+          <h2 class="slide-title">체감 격차는 실측보다 넓다: ‘우리 건물’이라는 소속감</h2>
+        </div>
+        <div class="slide-category">PERCEIVED GAP & MEDIATION</div>
+      </header>
+
+      <div class="slide-body">
+        <div class="grid-2">
+          <!-- 좌측: Figure 4 실측 vs 체감 격차 비교 -->
+          <div class="card" style="justify-content: space-around;">
+            <div style="font-weight: 700; font-size: 0.95rem; color: #fff;">
+              [Figure 4] 실측 격차 vs 체감 격차(Hedges' g)
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 4px;">
+                  <span>건물 기반 &bull; 접근성</span>
+                  <span style="color: var(--sns-blue);">체감 g = 1.20 (실측 차: 0.53)</span>
+                </div>
+                <div class="sns-bar-track"><div class="sns-bar-fill blue" data-target-width="70%">g = 1.20</div></div>
+              </div>
+
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 4px;">
+                  <span>학습 &bull; 휴게 공간</span>
+                  <span style="color: var(--sns-blue);">체감 g = 1.36 (실측 차: 0.68)</span>
+                </div>
+                <div class="sns-bar-track"><div class="sns-bar-fill blue" data-target-width="80%">g = 1.36</div></div>
+              </div>
+
+              <!-- 극적인 포인트: 위생 편의 -->
+              <div style="background: rgba(244, 63, 94, 0.08); padding: 8px; border-radius: 6px; border: 1px dashed rgba(244, 63, 94, 0.3);">
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 4px;">
+                  <span style="font-weight: 700; color: #fff;">위생 &bull; 편의 (실측 차: -0.02, 거의 같음!)</span>
+                  <span style="color: var(--sns-coral); font-weight: 800;">체감 g = 1.23</span>
+                </div>
+                <div class="sns-bar-track"><div class="sns-bar-fill coral" data-target-width="72%">g = 1.23</div></div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">
+                  실측으로 차이가 없던 화장실(g=1.12)·편의시설(g=1.07)에서도 체감 만족은 급락.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 우측: '우리 건물' 느낌의 97% 매개 효과 -->
+          <div class="card" style="justify-content: space-around; text-align: center;">
+            <div style="font-size: 0.9rem; color: var(--text-muted);">
+              단일 문항 중 집단 간 최대 격차 변수<sup class="ref-badge" data-ref="Ref-04">[4]</sup>
+            </div>
+            
+            <div style="font-size: 1.25rem; font-weight: 700; color: #fff;">
+              “이 건물은 ‘우리’ 건물이라는 느낌이 든다”
+            </div>
+
+            <div style="display: flex; justify-content: center; gap: 32px; align-items: baseline;">
+              <div>
+                <div style="font-size: 0.8rem; color: var(--sns-coral);">생물관 (사회대)</div>
+                <div class="stat-metric coral" data-count-to="1.87" data-decimals="2">0.00</div>
+              </div>
+              <div style="font-size: 1.8rem; color: var(--text-muted);">vs</div>
+              <div>
+                <div style="font-size: 0.8rem; color: var(--sns-blue);">경통관 (경통대)</div>
+                <div class="stat-metric blue" data-count-to="4.14" data-decimals="2">0.00</div>
+              </div>
+            </div>
+            <div style="font-size: 0.95rem; font-weight: 700; color: var(--sns-purple);">
+              효과 크기 Hedges’ g = 2.53 [1.87, 3.53] (압도적 차이)
+            </div>
+
+            <!-- 매개 분석 하이라이트 -->
+            <div style="background: rgba(167, 139, 250, 0.1); border: 1px solid rgba(167, 139, 250, 0.3); border-radius: 8px; padding: 12px; text-align: left;">
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--sns-purple); margin-bottom: 4px;">
+                📊 OLS 회귀 및 부트스트랩 매개 분석 (Table 6)
+              </div>
+              <p style="font-size: 0.82rem; color: #e2e8f0; line-height: 1.5;">
+                시설 만족 집단 차이 계수(-1.52***)는 '우리 건물' 느낌을 투입하자 <strong>-0.04(비유의)</strong>로 소멸.<br>
+                ➔ 소속감의 간접효과: <strong>전체 집단 차이의 97%를 매개</strong> [-2.22, -0.92].
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <div class="footnote-list">
+          <div class="footnote-item" data-ref="Ref-04"><span class="badge">[4]</span> 정병삼 (2025). 대학 신입생의 소속감에 영향을 주는 만족도 요인.</div>
+        </div>
+        <span class="slide-number">9 / 15</span>
+      </footer>
+    </section>
+
+    <!-- ==========================================================================
+         Slide 10: [Table 5 & Figure 6] 학생들의 일상적 대응: "불편하면 떠난다"
+         ========================================================================== -->
+    <section class="slide" data-slide="10">
+      <header class="slide-header">
+        <div>
+          <div class="slide-tag">Ⅳ. 연구 결과 4 &bull; Table 5 & Figure 6</div>
+          <h2 class="slide-title">학생들의 일상적 대응: “불편하면 건물을 떠난다”</h2>
+        </div>
+        <div class="slide-category">COPING MECHANISM & TIME SPENT</div>
+      </header>
+
+      <div class="slide-body">
+        <div class="grid-2">
+          <!-- 좌측: 체류 시간 및 공강 이탈 데이터 -->
+          <div class="card" style="justify-content: space-around;">
+            <div class="card-title">건물 내 체류 시간과 공간 이탈</div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 8px;">
+                <div style="font-size: 0.8rem; color: var(--text-muted);">수업 외 건물 체류 시간 (1~5)</div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 6px;">
+                  <span style="font-size: 0.85rem; color: var(--sns-coral);">사회대 2.15</span>
+                  <span style="font-size: 1.4rem; font-weight: 800; color: var(--sns-blue);">경통대 2.84</span>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--sns-blue); margin-top: 4px;">g = 0.54 (p = .015 유의)</div>
+              </div>
+
+              <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 8px;">
+                <div style="font-size: 0.8rem; color: var(--text-muted);">공강에 집/기숙사로 이탈</div>
+                <div class="stat-metric coral" data-count-to="24" data-suffix="%">0%</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">경통대는 8%에 불과</div>
+              </div>
+            </div>
+
+            <!-- 공강 장소 비교 바 -->
+            <div style="margin-top: 10px;">
+              <div style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 6px;">
+                공강 시간을 전공 건물 안에서 보내는 비율
+              </div>
+              <div class="sns-bar-track" style="height: 18px;">
+                <div class="sns-bar-fill blue" data-target-width="49%" style="font-size: 0.72rem;">경통대 49%</div>
+              </div>
+              <div class="sns-bar-track" style="height: 18px;">
+                <div class="sns-bar-fill coral" data-target-width="30%" style="font-size: 0.72rem;">사회대 30%</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 우측: 메커니즘 설명 (왜 삶의 만족은 유지되었는가?) -->
+          <div class="card" style="justify-content: space-around;">
+            <div class="card-title" style="color: var(--sns-green);">
+              만족도가 유지된 역설의 메커니즘
+            </div>
+            
+            <ul class="academic-list" style="font-size: 0.9rem; line-height: 1.6;">
+              <li><strong>캠퍼스 대체재의 흡수 효과:</strong> 학생들은 학교에 불만을 제기하거나 버티지 않고, <strong>도서관, 카페, 과방, 기숙사</strong>로 자리를 옮겨 문제를 해결함<sup class="ref-badge" data-ref="Ref-11">[11]</sup>.</li>
+              <li><strong>“그 순간에만 불편하다”:</strong> 건물에 머무는 시간을 최소화함으로써(수업 직전 도착, 종료 즉시 이탈) 건물 인프라가 일상에 미치는 악영향을 능동적으로 차단.</li>
+              <li><strong>숨겨진 대가:</strong> 평균적 만족도는 지켜냈지만, <strong>공강마다 짐을 싸서 떠돌아다니는 체력적·금전적 피로</strong>와 <strong>느슨해진 단과대학 공동체 애착</strong>이라는 무거운 대가를 치름.</li>
+            </ul>
+
+            <div style="background: rgba(244, 63, 94, 0.1); border-left: 3px solid var(--sns-red); padding: 10px 14px; font-size: 0.84rem; color: #fff;">
+              ⚠️ “만족도에 차이가 없었다는 결과를 ‘건물은 중요하지 않다’로 읽어서는 절대 안 된다.”
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <div class="footnote-list">
+          <div class="footnote-item" data-ref="Ref-11"><span class="badge">[11]</span> 조미혜 (2024). 기숙사 장소감 형성과 대학 생활 적응 간의 관계.</div>
+        </div>
+        <span class="slide-number">10 / 15</span>
+      </footer>
+    </section>
+
+    <!-- ==========================================================================
+         Slide 11: [Figure 5] 평균 아래의 차이: 상실의 기억 (Seaborn DID Motion)
+         ========================================================================== -->
+    <section class="slide" data-slide="11">
+      <header class="slide-header">
+        <div>
+          <div class="slide-tag">Ⅳ. 연구 결과 5 &bull; Figure 5</div>
+          <h2 class="slide-title">평균 아래의 차이: ‘잃어 본 기억’과 삶의 만족도</h2>
+        </div>
+        <div class="slide-category">DIFFERENCE-IN-DIFFERENCES (DID)</div>
+      </header>
+
+      <div class="slide-body">
+        <div class="grid-2">
+          <!-- 좌측: SVG 기반 이중차분 (DID) 꺾은선 플롯 모션 -->
+          <div class="did-chart-box">
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 6px;">
+              <span style="font-weight: 700; color: #fff;">[Figure 5] 학년별 삶의 만족도 (SWLS 1~7점)</span>
+              <span style="color: var(--text-muted); font-size: 0.75rem;">DID 계수 = 1.27 (p = .012)</span>
+            </div>
+
+            <svg viewBox="0 0 450 240" style="width: 100%; height: 210px;">
+              <!-- 격자선 -->
+              <line x1="50" y1="30" x2="420" y2="30" stroke="#334155" stroke-dasharray="2" />
+              <line x1="50" y1="90" x2="420" y2="90" stroke="#334155" stroke-dasharray="2" />
+              <line x1="50" y1="150" x2="420" y2="150" stroke="#334155" stroke-dasharray="2" />
+              <line x1="50" y1="210" x2="420" y2="210" stroke="#475569" />
+
+              <!-- Y축 레이블 -->
+              <text x="35" y="35" fill="#94a3b8" font-size="11" text-anchor="end">5.5</text>
+              <text x="35" y="95" fill="#94a3b8" font-size="11" text-anchor="end">5.0</text>
+              <text x="35" y="155" fill="#94a3b8" font-size="11" text-anchor="end">4.5</text>
+              <text x="35" y="215" fill="#94a3b8" font-size="11" text-anchor="end">4.0</text>
+
+              <!-- X축 레이블 -->
+              <text x="130" y="232" fill="#e2e8f0" font-size="12" text-anchor="middle">1학년 (옛사회관 경험 無)</text>
+              <text x="340" y="232" fill="#e2e8f0" font-size="12" text-anchor="middle">2~4학년 (옛사회관 경험 有)</text>
+
+              <!-- 경통대 라인 (4.38 -> 4.95, 상승 트렌드) -->
+              <path class="motion-svg-line" d="M 130 165 L 340 96" stroke="var(--sns-blue)" stroke-width="3" fill="none" />
+              <!-- 경통대 마커 -->
+              <circle class="motion-svg-dot" cx="130" cy="165" r="5" fill="var(--sns-blue)" />
+              <circle class="motion-svg-dot" cx="340" cy="96" r="5" fill="var(--sns-blue)" />
+              <text x="130" y="155" fill="var(--sns-blue)" font-size="11" font-weight="700" text-anchor="middle">4.38</text>
+              <text x="340" y="86" fill="var(--sns-blue)" font-size="11" font-weight="700" text-anchor="middle">4.95</text>
+
+              <!-- 사회대 라인 (4.93 -> 4.23, 급격한 하강 트렌드!) -->
+              <path class="motion-svg-line" d="M 130 98 L 340 182" stroke="var(--sns-coral)" stroke-width="3" stroke-dasharray="4" fill="none" />
+              <!-- 사회대 마커 -->
+              <circle class="motion-svg-dot" cx="130" cy="98" r="5" fill="var(--sns-coral)" />
+              <circle class="motion-svg-dot" cx="340" cy="182" r="5" fill="var(--sns-coral)" />
+              <text x="130" y="88" fill="var(--sns-coral)" font-size="11" font-weight="700" text-anchor="middle">4.93</text>
+              <text x="340" y="200" fill="var(--sns-coral)" font-size="11" font-weight="700" text-anchor="middle">4.23</text>
+            </svg>
+
+            <div style="display: flex; justify-content: center; gap: 20px; font-size: 0.78rem; margin-top: 4px;">
+              <span style="color: var(--sns-coral);">--- 사회과학대 (1학년 4.93 ➔ 2~4학년 4.23)</span>
+              <span style="color: var(--sns-blue);">── 경제통상대 (1학년 4.38 ➔ 2~4학년 4.95)</span>
+            </div>
+          </div>
+
+          <!-- 우측: 상실감과 준거집단 비교 설명 -->
+          <div class="card" style="justify-content: space-around;">
+            <div class="card-title">‘상실의 경험’이 만든 격차</div>
+            
+            <div style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 8px;">
+              <div style="font-size: 0.8rem; color: var(--text-muted);">2~4학년 집단 간 삶의 만족도 차이</div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 4px;">
+                <span style="font-size: 0.88rem; color: var(--sns-coral);">사회대 4.23점</span>
+                <span style="font-size: 1.4rem; font-weight: 800; color: var(--sns-blue);">경통대 4.95점</span>
+              </div>
+              <div style="font-size: 0.8rem; color: var(--sns-coral); font-weight: 700; margin-top: 4px;">
+                Hedges’ g = 0.65 [0.16, 1.22], p = .015 (유의미한 차이!)
+              </div>
+            </div>
+
+            <ul class="academic-list" style="font-size: 0.88rem; line-height: 1.55;">
+              <li><strong>1학년:</strong> 생물관이 처음부터 주어진 대학의 모습이므로 불만이 삶의 질까지 침투하지 않음.</li>
+              <li><strong>2~4학년:</strong> ‘원래 있던 우리 건물을 빼앗기고 옮겨 왔다’는 <strong>상실의 경험</strong>과 옆의 신축 단과대를 바라보는 <strong>상대적 박탈감</strong><sup class="ref-badge" data-ref="Ref-12">[12]</sup>이 삶의 만족도 저하를 견인함.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <div class="footnote-list">
+          <div class="footnote-item" data-ref="Ref-12"><span class="badge">[12]</span> Runciman (1966). Relative Deprivation and Social Justice.</div>
+        </div>
+        <span class="slide-number">11 / 15</span>
+      </footer>
+    </section>
+
+    <!-- ==========================================================================
+         Slide 12: [Table 9] 심층 인터뷰 질적 분석 (5대 핵심 주제)
+         ========================================================================== -->
+    <section class="slide" data-slide="12">
+      <header class="slide-header">
+        <div>
+          <div class="slide-tag">Ⅳ. 연구 결과 6 &bull; Table 9</div>
+          <h2 class="slide-title">1:1 심층 인터뷰 질적 분석: 현장의 생생한 목소리</h2>
+        </div>
+        <div class="slide-category">QUALITATIVE THEMES (n = 6)</div>
+      </header>
+
+      <div class="slide-body">
+        <div class="grid-3" style="grid-template-rows: repeat(2, 1fr);">
+          
+          <!-- 테마 1: 쉴 곳과 머무를 곳이 없다 -->
+          <div class="card stagger-item">
+            <div class="card-title" style="color: var(--sns-blue); font-size: 1rem;">
+              <span>(1) 쉴 곳과 머무를 곳이 없다</span>
+              <span style="font-size: 0.72rem; color: var(--text-muted);">전원 언급</span>
+            </div>
+            <p style="font-size: 0.84rem; color: #e2e8f0; font-style: italic; line-height: 1.5;">
+              “오전에 수업이 끝나면 5~6시간 되는 공강을 카페, 과방, 나래를 하루 종일 계속 돌아다녀야 되니까 체력적으로 너무 힘들었어요.” (S2)
+            </p>
+          </div>
+
+          <!-- 테마 2: 빌려 쓰는 건물 -->
+          <div class="card stagger-item">
+            <div class="card-title" style="color: var(--sns-coral); font-size: 1rem;">
+              <span>(2) 생물관은 ‘빌려 쓰는 건물’</span>
+              <span style="font-size: 0.72rem; color: var(--text-muted);">S1~S3 공통</span>
+            </div>
+            <p style="font-size: 0.84rem; color: #e2e8f0; font-style: italic; line-height: 1.5;">
+              “진짜 저희가 얹혀 사는 기분이니까 약간 굴러온 돌이 박힌 돌 빼는 느낌으로다가... 자과대 학생들이 3, 4층을 뺏겼다고 느껴요.” (S1)
+            </p>
+          </div>
+
+          <!-- 테마 3: 불편하면 떠난다 -->
+          <div class="card stagger-item">
+            <div class="card-title" style="color: var(--sns-purple); font-size: 1rem;">
+              <span>(3) 불편하면 떠난다</span>
+              <span style="font-size: 0.72rem; color: var(--text-muted);">대처 방식</span>
+            </div>
+            <p style="font-size: 0.84rem; color: #e2e8f0; font-style: italic; line-height: 1.5;">
+              “학교가 불편하면 그냥 수업만 듣고 바로 딴 데로 가면 되니까. 그 불편한 것도 그냥 그 순간에만 살짝 불편하고 끝나는 거라서.” (E2)
+            </p>
+          </div>
+
+          <!-- 테마 4: 시설보다 운영이 문제다 -->
+          <div class="card stagger-item">
+            <div class="card-title" style="color: var(--sns-green); font-size: 1rem;">
+              <span>(4) 시설보다 운영이 문제다</span>
+              <span style="font-size: 0.72rem; color: var(--text-muted);">양측 공통</span>
+            </div>
+            <p style="font-size: 0.84rem; color: #e2e8f0; font-style: italic; line-height: 1.5;">
+              “경통관은 흡연구역이 옥상으로 가면서 엘리베이터가 마비되고, 생물관은 문 잠기는 시간과 강의실 개방 시간이 들쭉날쭉해요.” (E1, S3)
+            </p>
+          </div>
+
+          <!-- 테마 5: 기준은 옆의 새 건물 -->
+          <div class="card stagger-item" style="grid-column: span 2;">
+            <div class="card-title" style="color: #fff; font-size: 1rem;">
+              <span>(5) 기준은 옆의 새 건물: 상대적 박탈감의 근원</span>
+            </div>
+            <p style="font-size: 0.84rem; color: #e2e8f0; font-style: italic; line-height: 1.5;">
+              “특히 인문대랑 경통대를 보면 박탈감을 느껴요. 딱 봐도 여기는 헌 건물이고 거기는 새 건물이네... 사회관이랑 비교하면 거기서 거기지만, 신축 건물들이랑 비교하면 차이가 너무 크게 체감돼요.” (S1, S2)
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <div class="footnote-list">
+          <div class="footnote-item" data-ref="Ref-15"><span class="badge">[15]</span> 주제 분석(Thematic Analysis)에 따른 질적 코드화</div>
+        </div>
+        <span class="slide-number">12 / 15</span>
+      </footer>
+    </section>
+
+    <!-- ==========================================================================
+         Slide 13: [Table 6 & Figure 6] 종합 논의: 무엇이 삶을 지탱하는가?
+         ========================================================================== -->
+    <section class="slide" data-slide="13">
+      <header class="slide-header">
+        <div>
+          <div class="slide-tag">Ⅴ. 종합 논의 &bull; Table 6 & Figure 6</div>
+          <h2 class="slide-title">학생의 대학생활을 지탱하는 것은 건물보다 ‘사람’이었다</h2>
+        </div>
+        <div class="slide-category">GENERAL DISCUSSION</div>
+      </header>
+
+      <div class="slide-body">
+        <div class="grid-2">
+          <!-- 좌측: 회귀분석 결과 (사람 vs 건물) -->
+          <div class="card" style="justify-content: space-around;">
+            <div class="card-title">대학생활 및 삶의 만족도 결정 회귀모형 (Table 6)</div>
+            
+            <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 8px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-weight: 700; color: #fff;">학과 친구 &bull; 선후배 관계</span>
+                <span style="font-size: 1.3rem; font-weight: 800; color: var(--sns-blue);">b = 0.55***</span>
+              </div>
+              <div style="font-size: 0.78rem; color: var(--sns-green); margin-top: 4px;">p &lt; .001 (대학생활 만족의 가장 강력한 예측 요인)</div>
+            </div>
+
+            <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 8px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-weight: 700; color: #fff;">시설 만족</span>
+                <span style="font-size: 1.3rem; font-weight: 800; color: var(--text-muted);">b = 0.00</span>
+              </div>
+              <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">p = .989 (통계적 유의성 전혀 없음)</div>
+            </div>
+
+            <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5;">
+              삶의 만족(SWLS) 모형에서도 마찬가지로 <strong>학과 관계(b = 0.41***)</strong>만이 유의하였고, 시설 만족(b = 0.05, p = ns)은 영향력이 없었습니다.
+            </p>
+          </div>
+
+          <!-- 우측: 인터뷰 증언 및 핵심 메시지 -->
+          <div class="card" style="justify-content: space-around; background: linear-gradient(145deg, #1e293b, #0f172a);">
+            <div style="border-left: 4px solid var(--sns-purple); padding-left: 14px;">
+              <p style="font-size: 1.15rem; font-weight: 600; color: #fff; line-height: 1.6;">
+                “한 98%는 다 그냥 학교 사람들인 것 같아요.<br>
+                나는 지금 이런 학교 사람들한테 만족해서 그렇게 느끼는 거지, 만약에 사람들한테 만족 안 하고 오갈 데가 없었다면 진짜 훨씬 많이 불만을 느꼈을 거예요.”
+              </p>
+              <div style="font-size: 0.85rem; color: var(--sns-purple); margin-top: 8px;">— 사회과학대학 참여자 S2</div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.04); border-radius: 8px; padding: 14px; font-size: 0.88rem; line-height: 1.6; color: #e2e8f0;">
+              💡 <strong>학술적 결론:</strong> 물리적 시설은 학생 만족의 독립적 결정 인자라기보다, <strong>학생들이 서로 만나고 관계를 맺는 플랫폼(장)으로서 기능</strong>할 때 비로소 진정한 가치를 발휘합니다<sup class="ref-badge" data-ref="Ref-03">[3]</sup>.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <div class="footnote-list">
+          <div class="footnote-item" data-ref="Ref-03"><span class="badge">[3]</span> Kim & Chu (2024). 대학 시설 만족과 자부심 및 관계의 매개효과.</div>
+        </div>
+        <span class="slide-number">13 / 15</span>
+      </footer>
+    </section>
+
+    <!-- ==========================================================================
+         Slide 14: [Table 11 & Table 7] 새 사회관에 주는 시사점: 6대 공간 제언
+         ========================================================================== -->
+    <section class="slide" data-slide="14">
+      <header class="slide-header">
+        <div>
+          <div class="slide-tag">Ⅵ. 실천적 제언 &bull; Table 11 & Table 7</div>
+          <h2 class="slide-title">새 사회관(2026+)에 바란다: 학생 근거 기반 6대 공간 제언</h2>
+        </div>
+        <div class="slide-category">PRACTICAL IMPLICATIONS</div>
+      </header>
+
+      <div class="slide-body">
+        <div class="grid-2">
+          <!-- 좌측: 사회대 학생 희망 시설 랭킹 (Seaborn Ranking Bar Motion) -->
+          <div class="card" style="justify-content: space-around;">
+            <div class="card-title">
+              <span>사회대 학생이 새 사회관에 가장 바라는 공간 (n = 46)</span>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 3px;">
+                  <span>1위. 조용한 개인 열람실</span>
+                  <strong style="color: var(--sns-blue);">50% (23명)</strong>
+                </div>
+                <div class="sns-bar-track"><div class="sns-bar-fill blue" data-target-width="50%">50%</div></div>
+              </div>
+
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 3px;">
+                  <span>2위. 누워서 쉴 수 있는 수면·휴게실</span>
+                  <strong style="color: var(--sns-blue);">46% (21명)</strong>
+                </div>
+                <div class="sns-bar-track"><div class="sns-bar-fill blue" data-target-width="46%">46%</div></div>
+              </div>
+
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 3px;">
+                  <span>3위. 깨끗한 화장실 &bull; 비데</span>
+                  <strong style="color: var(--sns-blue);">43% (20명)</strong>
+                </div>
+                <div class="sns-bar-track"><div class="sns-bar-fill blue" data-target-width="43%">43%</div></div>
+              </div>
+
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 3px;">
+                  <span>4위. 과방과 분리된 휴식 라운지</span>
+                  <strong style="color: var(--sns-blue);">39% (18명)</strong>
+                </div>
+                <div class="sns-bar-track"><div class="sns-bar-fill blue" data-target-width="39%">39%</div></div>
+              </div>
+
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 3px;">
+                  <span>5위. 전 좌석 콘센트 확충</span>
+                  <strong style="color: var(--sns-blue);">35% (16명)</strong>
+                </div>
+                <div class="sns-bar-track"><div class="sns-bar-fill blue" data-target-width="35%">35%</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 우측: Table 11 6대 핵심 제언 매트릭스 -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div class="card" style="padding: 12px;">
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--sns-blue);">① 수면·휴게실 다층 배치</div>
+              <p style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 4px;">리클라이너·소파를 구비한 휴게실을 여러 층에 적정 면적으로 분산 설치</p>
+            </div>
+            <div class="card" style="padding: 12px;">
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--sns-blue);">② 전용 학습+협업 공간</div>
+              <p style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 4px;">조용한 정독실과 대화형 그룹 스터디룸을 함께 구축<sup class="ref-badge" data-ref="Ref-06">[6]</sup></p>
+            </div>
+            <div class="card" style="padding: 12px;">
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--sns-purple);">③ 과방과 분리된 라운지</div>
+              <p style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 4px;">과방 특유의 '눈치' 없이 누구나 편하게 머무는 오픈 라운지 확보</p>
+            </div>
+            <div class="card" style="padding: 12px;">
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--sns-purple);">④ 저비용 고효율 인프라</div>
+              <p style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 4px;">설계 단계 반영 시 비용 부담이 적은 좌석 콘센트 및 비데 완비</p>
+            </div>
+            <div class="card" style="padding: 12px;">
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--sns-coral);">⑤ 한 건물 원스톱 소속감</div>
+              <p style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 4px;">교수 연구실, 학생회 공간, 전공 강의실을 한 건물에 집약</p>
+            </div>
+            <div class="card" style="padding: 12px;">
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--sns-green);">⑥ 투명한 운영 및 피드백</div>
+              <p style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 4px;">개방 시간 및 엘리베이터 운행 규칙을 사전 공지하고 학생 의견 수렴 채널 마련</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <div class="footnote-list">
+          <div class="footnote-item" data-ref="Ref-06"><span class="badge">[6]</span> 구상회·이현희 (2019)</div>
+          <div class="footnote-item" data-ref="Ref-16"><span class="badge">[16]</span> 부산대 사회관 재건축 계획 (2023)</div>
+        </div>
+        <span class="slide-number">14 / 15</span>
+      </footer>
+    </section>
+
+    <!-- ==========================================================================
+         Slide 15: 참고문헌 종합 & 맺음말 (References & Q&A)
+         ========================================================================== -->
+    <section class="slide" data-slide="15">
+      <header class="slide-header">
+        <div>
+          <div class="slide-tag">REFERENCES & CONCLUSION</div>
+          <h2 class="slide-title">참고문헌 종합 및 질의응답 (Q&A)</h2>
+        </div>
+        <div class="slide-category">THE END</div>
+      </header>
+
+      <div class="slide-body">
+        <div class="grid-2">
+          <!-- 좌측: 논문 인용 서지 목록 -->
+          <div class="card" style="font-size: 0.75rem; line-height: 1.45; overflow-y: auto; max-height: 480px; padding: 14px 18px;">
+            <div style="font-weight: 700; font-size: 0.85rem; color: #fff; margin-bottom: 8px;">주요 참고문헌 (Selected References)</div>
+            <p><strong>[1] Churchill, W. (1943).</strong> House of Commons Rebuilding. Hansard, vol. 393.</p>
+            <p><strong>[2] 김인숙·정주영 (2010).</strong> 대학생활만족도에 관한 집단 간 비교연구. 『교육종합연구』 8(3): 241-260.</p>
+            <p><strong>[3] Kim, J. N. & Chu, S. E. (2024).</strong> 대학 시설 만족이 대학생활 만족에 미치는 영향. 『한국컴퓨터정보학회논문지』 29(10).</p>
+            <p><strong>[4] 정병삼 (2025).</strong> 대학 신입생의 소속감에 영향을 주는 만족도 요인. 『차세대융합기술학회논문지』 9(8).</p>
+            <p><strong>[5] 이나리·박지홍 (2022).</strong> 대학생의 학습공간 선택에 영향을 미치는 요인. 『정보관리학회지』 39(2).</p>
+            <p><strong>[6] 구상회·이현희 (2019).</strong> 대학의 학습공간에 대한 사용자 인식 조사. 『교육시설 논문지』 26(3).</p>
+            <p><strong>[7] 최호순 (2019).</strong> 대학 캠퍼스 실외 휴게 공간 계획에 관한 연구. 『교육시설 논문지』 26(1).</p>
+            <p><strong>[8] Preiser, W. et al. (1988).</strong> Post-Occupancy Evaluation. Van Nostrand Reinhold.</p>
+            <p><strong>[9] 안용한 (2022).</strong> POE를 통한 모듈러 임시교사 재실 환경 성능 분석. 『한국퍼실리티매니지먼트학회지』 17(2).</p>
+            <p><strong>[10] Scannell, L. & Gifford, R. (2010).</strong> Defining Place Attachment. J. Environ. Psychol. 30(1).</p>
+            <p><strong>[11] 조미혜 (2024).</strong> 기숙사 장소감 형성과 대학 생활 적응 간의 관계. 『학습자중심교과교육연구』 24(9).</p>
+            <p><strong>[12] Runciman, W. (1966).</strong> Relative Deprivation and Social Justice. Routledge.</p>
+            <p><strong>[13] Diener, E. et al. (1985).</strong> The Satisfaction With Life Scale. J. Pers. Assess. 49(1).</p>
+            <p><strong>[14] Braun, V. & Clarke, V. (2006).</strong> Using Thematic Analysis in Psychology. Qual. Res. Psychol. 3(2).</p>
+          </div>
+
+          <!-- 우측: 수미상관 마무리 & Q&A 안내 -->
+          <div class="card" style="justify-content: center; text-align: center; background: radial-gradient(circle at center, rgba(56,189,248,0.1) 0%, transparent 70%), var(--bg-card);">
+            <div style="font-size: 1.15rem; color: var(--sns-blue); font-weight: 700; margin-bottom: 12px;">
+              “건물은 학생을 만드는가?”
+            </div>
+            <p style="font-size: 1.05rem; color: #fff; line-height: 1.6; max-width: 440px; margin: 0 auto 24px auto;">
+              건물은 학생들의 삶의 만족을 직접 바꾸지는 못했습니다.<br>
+              하지만 <strong>학생들이 어디에 머물고, 누구를 만나며, 어떤 소속감을 느끼는가</strong>를 결정지었습니다.
+            </p>
+            
+            <div style="padding: 16px; border: 1px dashed var(--border-focus); border-radius: 10px; background: rgba(56, 189, 248, 0.05); max-width: 440px; margin: 0 auto;">
+              <div style="font-size: 1.6rem; font-weight: 800; color: #fff; margin-bottom: 6px;">질의응답 (Q & A)</div>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">
+                경청해 주셔서 대단히 감사합니다.<br>
+                연구에 대한 질문이나 고견을 부탁드립니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="slide-footer">
+        <div>부산대학교 사회과학대학 사회학과 &bull; 학술제 발표 프로젝트</div>
+        <span class="slide-number">15 / 15</span>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- 컨트롤 패널 버튼 -->
+  <aside id="deck-controls">
+    <button id="btn-prev" class="ctrl-btn" title="이전 슬라이드 (←)">◀</button>
+    <button id="btn-next" class="ctrl-btn" title="다음 슬라이드 (→)">▶</button>
+    <button id="btn-fullscreen" class="ctrl-btn" title="전체화면 토글 (F)">⛶</button>
+    <button id="btn-help" class="ctrl-btn" title="단축키 안내 (H)">?</button>
+  </aside>
+
+  <!-- 단축키 안내 팝업 모달 -->
+  <div id="help-modal">
+    <div class="modal-content">
+      <h3>⌨️ 슬라이드 단축키 안내</h3>
+      <div class="shortcut-row"><span>다음 슬라이드</span><span><kbd>→</kbd> <kbd>Space</kbd> <kbd>PageDown</kbd></span></div>
+      <div class="shortcut-row"><span>이전 슬라이드</span><span><kbd>←</kbd> <kbd>Backspace</kbd> <kbd>PageUp</kbd></span></div>
+      <div class="shortcut-row"><span>첫 장 / 마지막 장</span><span><kbd>Home</kbd> / <kbd>End</kbd></span></div>
+      <div class="shortcut-row"><span>전체화면 전환</span><span><kbd>F</kbd></span></div>
+      <div class="shortcut-row"><span>단축키 창 닫기</span><span><kbd>H</kbd> 또는 <kbd>Esc</kbd></span></div>
+      <p style="margin-top: 16px; font-size: 0.8rem; color: var(--text-muted); text-align: center;">
+        창 밖의 어두운 영역을 클릭하거나 H 키를 누르면 닫힙니다.
+      </p>
+    </div>
+  </div>
+
+  <script src="js/slide.js"></script>
+</body>
+</html>
