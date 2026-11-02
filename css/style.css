@@ -1,35 +1,38 @@
 /* ==========================================================================
-   학술제 발표용 HTML 슬라이드덱 스타일시트 (Academic Seaborn & Motion Theme)
+   학술제 발표용 HTML 슬라이드덱 스타일시트 (Warm Editorial & Minimal Bright)
+   참고자료 레퍼런스(CropArea0000, CropArea0001)의 매거진 & 미니멀 감성 반영
    ========================================================================== */
 
 :root {
-  /* 테마 컬러 (Seaborn DarkGrid & Academic Navy) */
-  --bg-deck: #090d16;
-  --bg-slide: #0f172a;
-  --bg-card: #1e293b;
-  --bg-card-subtle: rgba(30, 41, 59, 0.7);
-  --border-color: rgba(255, 255, 255, 0.12);
-  --border-focus: rgba(56, 189, 248, 0.5);
+  /* 배경 & 서피스 컬러 (밝고 화사한 웜 크림/아이보리/화이트) */
+  --bg-deck: #ede8e1;             /* 데크 바깥 배경 (부드러운 오트밀 베이지) */
+  --bg-slide: #ffffff;            /* 슬라이드 캔버스 (클린 화이트) */
+  --bg-surface: #f9f7f2;          /* 기본 카드 배경 (웜 크림) */
+  --bg-surface-alt: #f1ede4;      /* 보조 카드 배경 (소프트 토프) */
+  --bg-accent-block: #8c786a;     /* 에디토리얼 모카 브라운 블록 */
+  --bg-accent-soft: #ebdcd0;      /* 연한 피치/카라멜 서브 블록 */
 
-  /* 텍스트 컬러 */
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --text-highlight: #ffffff;
+  /* 텍스트 컬러 (선명한 에스프레소 & 차콜) */
+  --text-main: #231f1d;           /* 짙은 본문 텍스트 (블랙보다 부드러운 다크 에스프레소) */
+  --text-secondary: #574f4a;      /* 보조 설명 텍스트 (미디엄 브라운) */
+  --text-muted: #8c827a;          /* 각주 / 약한 텍스트 (소프트 그레이 브라운) */
+  --text-inverse: #ffffff;        /* 짙은 블록 위 화이트 텍스트 */
 
-  /* Seaborn 스타일 데이터 시각화 팔레트 */
-  --sns-blue: #38bdf8;        /* 경통대 / 우위 지표 */
-  --sns-coral: #fb923c;       /* 사회대(생물관) / 결핍 지표 */
-  --sns-purple: #a78bfa;      /* 매개 / 관계 요인 */
-  --sns-green: #34d399;       /* 일치 / 긍정 지표 */
-  --sns-red: #f43f5e;         /* 기준선 (0선, p < .05) */
-  --sns-gray: #475569;        /* 그리드 / 축선 */
+  /* 포인트 컬러 (밝고 활기찬 학술 악센트) */
+  --accent-primary: #8c786a;      /* 시그니처 모카 브라운 */
+  --accent-blue: #0284c7;         /* 경통대 / 신축 인프라 (청명한 스카이블루) */
+  --accent-coral: #ea580c;        /* 사회대 / 결핍 지표 (활기찬 웜 카라멜 코랄) */
+  --accent-purple: #7c3aed;       /* 소속감 / 관계 요인 (소프트 바이올렛) */
+  --accent-green: #059669;        /* 긍정 / 등가 판정 (프레시 민트그린) */
+  --border-light: rgba(0, 0, 0, 0.08);
+  --border-strong: rgba(0, 0, 0, 0.16);
 
-  /* 규격 */
+  /* 슬라이드 뷰포트 규격 (16:9 비율) */
   --slide-width: 1280px;
   --slide-height: 720px;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR", "Segoe UI", Roboto, sans-serif;
-  --font-mono: "Fira Code", Menlo, Monaco, Consolas, monospace;
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, "Noto Sans KR", "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Playfair Display", "ChosunCentennial", "Batang", serif;
+  --font-mono: "JetBrains Mono", "Fira Code", Menlo, monospace;
 }
 
 * {
@@ -40,7 +43,7 @@
 
 body {
   background-color: var(--bg-deck);
-  color: var(--text-primary);
+  color: var(--text-main);
   font-family: var(--font-sans);
   overflow: hidden;
   height: 100vh;
@@ -57,30 +60,30 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 4px;
-  background: rgba(255, 255, 255, 0.08);
+  height: 5px;
+  background: rgba(0, 0, 0, 0.06);
   z-index: 1000;
 }
 
 #progress-bar {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, var(--sns-blue), var(--sns-purple));
+  background: linear-gradient(90deg, var(--bg-accent-block), var(--accent-coral));
   transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* 16:9 슬라이드 컨테이너 */
+/* 16:9 슬라이드 컨테이너 (고급 프레임 & 소프트 섀도우) */
 #presentation-deck {
   width: var(--slide-width);
   height: var(--slide-height);
   position: relative;
   background: var(--bg-slide);
-  border-radius: 14px;
-  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8), 0 0 0 1px var(--border-color);
+  border-radius: 16px;
+  box-shadow: 0 25px 60px -15px rgba(60, 45, 30, 0.18), 0 0 0 1px rgba(0, 0, 0, 0.05);
   overflow: hidden;
 }
 
-/* 슬라이드 기본 구조 */
+/* 개별 슬라이드 기본 스타일 */
 .slide {
   position: absolute;
   inset: 0;
@@ -90,10 +93,11 @@ body {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  background: radial-gradient(circle at 88% 12%, rgba(56, 189, 248, 0.07) 0%, transparent 60%),
-              radial-gradient(circle at 12% 88%, rgba(167, 139, 250, 0.06) 0%, transparent 60%),
-              var(--bg-slide);
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  background-color: var(--bg-slide);
+  background-image: 
+    radial-gradient(at 95% 5%, rgba(235, 220, 208, 0.4) 0px, transparent 50%),
+    radial-gradient(at 5% 95%, rgba(241, 237, 228, 0.5) 0px, transparent 50%);
+  transition: opacity 0.35s ease, visibility 0.35s ease;
 }
 
 .slide.active {
@@ -102,36 +106,55 @@ body {
   visibility: visible;
 }
 
-/* 헤더 */
+/* 대형 섹션 번호 워터마크 (CropArea0000 에디토리얼 스타일) */
+.watermark-num {
+  position: absolute;
+  top: 15px;
+  right: 45px;
+  font-size: 6.5rem;
+  font-weight: 900;
+  color: rgba(140, 120, 106, 0.1);
+  font-family: var(--font-sans);
+  line-height: 1;
+  pointer-events: none;
+  z-index: 0;
+  letter-spacing: -0.04em;
+}
+
+/* 헤더 영역 */
 .slide-header {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 2px solid var(--border-light);
   padding-bottom: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .slide-tag {
   font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
-  color: var(--sns-blue);
+  letter-spacing: 0.14em;
+  color: var(--accent-coral);
   text-transform: uppercase;
   margin-bottom: 4px;
 }
 
 .slide-title {
   font-size: 1.85rem;
-  font-weight: 700;
-  color: var(--text-highlight);
-  letter-spacing: -0.02em;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.025em;
 }
 
 .slide-category {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
   color: var(--text-muted);
   font-family: var(--font-mono);
+  letter-spacing: 0.05em;
 }
 
 /* 본문 영역 */
@@ -140,19 +163,22 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+  z-index: 1;
   overflow: hidden;
 }
 
 /* 하단 각주 및 푸터 */
 .slide-footer {
-  margin-top: 14px;
+  margin-top: 12px;
   padding-top: 10px;
-  border-top: 1px dashed var(--border-color);
+  border-top: 1px dashed var(--border-light);
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.78rem;
   color: var(--text-muted);
+  position: relative;
+  z-index: 1;
 }
 
 .footnote-list {
@@ -164,50 +190,54 @@ body {
 .footnote-item {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: 4px;
   transition: all 0.25s ease;
 }
 
 .footnote-item .badge {
-  color: var(--sns-blue);
-  font-weight: 700;
+  color: var(--accent-coral);
+  font-weight: 800;
   font-family: var(--font-mono);
 }
 
 .slide-number {
   font-family: var(--font-mono);
   font-size: 0.85rem;
+  font-weight: 700;
   color: var(--text-muted);
 }
 
-/* 인용 뱃지 */
+/* 레퍼런스 인용 뱃지 */
 .ref-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(56, 189, 248, 0.15);
-  color: var(--sns-blue);
+  background: #fbf0ea;
+  color: var(--accent-coral);
   font-size: 0.72rem;
-  font-weight: 700;
-  padding: 1px 5px;
+  font-weight: 800;
+  padding: 1px 6px;
   border-radius: 4px;
   margin-left: 3px;
   vertical-align: super;
   cursor: pointer;
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  border: 1px solid rgba(234, 88, 12, 0.25);
   transition: all 0.2s ease;
 }
 
 .ref-badge:hover {
-  background: var(--sns-blue);
-  color: #0f172a;
+  background: var(--accent-coral);
+  color: #fff;
+  transform: translateY(-1px);
 }
 
-/* 레이아웃 유틸리티 */
+/* 그리드 시스템 */
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 22px;
   height: 100%;
   align-items: stretch;
 }
@@ -215,7 +245,7 @@ body {
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 18px;
   height: 100%;
   align-items: stretch;
 }
@@ -223,26 +253,48 @@ body {
 .grid-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  gap: 14px;
   height: 100%;
   align-items: stretch;
 }
 
-/* 카드 컴포넌트 */
+/* 카드 컴포넌트 (밝은 베이지/화이트 입체 카드) */
 .card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 10px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   position: relative;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* 짙은 모카 포인트 카드 (CropArea0000 감성) */
+.card-mocha {
+  background: var(--bg-accent-block);
+  color: var(--text-inverse);
+  border: none;
+}
+
+.card-mocha .card-title,
+.card-mocha strong {
+  color: #ffffff;
+}
+
+.card-mocha .card-body {
+  color: #eeddd2;
 }
 
 .card-title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #fff;
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: var(--text-main);
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -255,17 +307,59 @@ body {
   color: var(--text-secondary);
 }
 
+/* 에디토리얼 태그 칩 */
+.editorial-chip {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.chip-blue { background: #e0f2fe; color: #0369a1; }
+.chip-coral { background: #ffedd5; color: #c2410c; }
+.chip-mocha { background: #efebe8; color: #57463a; }
+.chip-green { background: #dcfce7; color: #15803d; }
+
+/* 리스트 스타일 */
+.editorial-list {
+  list-style: none;
+  padding: 0;
+}
+
+.editorial-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.editorial-list li::before {
+  content: "•";
+  position: absolute;
+  left: 4px;
+  color: var(--accent-coral);
+  font-size: 1.1rem;
+  line-height: 1;
+  top: 1px;
+}
+
 /* ==========================================================================
-   Seaborn 스타일 모션 그래픽 컴포넌트
+   Seaborn 스타일 밝은 모션 그래픽 컴포넌트
    ========================================================================== */
 
-/* 범례 (Legend) */
+/* 범례 */
 .sns-legend {
   display: flex;
   align-items: center;
   gap: 18px;
   margin-bottom: 12px;
-  font-size: 0.85rem;
+  font-size: 0.84rem;
+  font-weight: 600;
   color: var(--text-secondary);
 }
 
@@ -281,81 +375,80 @@ body {
   border-radius: 2px;
 }
 
-.legend-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-/* 1. Seaborn Horizontal Bar Chart (실측 인프라 비교) */
+/* 1. 밝은 Seaborn 가로 막대 차트 */
 .sns-bar-group {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .sns-bar-header {
   display: flex;
   justify-content: space-between;
   font-size: 0.88rem;
-  font-weight: 600;
-  margin-bottom: 6px;
-  color: #e2e8f0;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: var(--text-main);
 }
 
 .sns-bar-track {
   height: 22px;
-  background: #1e293b;
-  border-radius: 4px;
+  background: #ede8e1;
+  border-radius: 6px;
   position: relative;
   overflow: hidden;
   margin-bottom: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .sns-bar-fill {
   height: 100%;
-  width: 0%; /* 애니메이션 초기값 */
-  border-radius: 3px;
+  width: 0%;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding-right: 8px;
   font-size: 0.78rem;
   font-family: var(--font-mono);
-  font-weight: 700;
-  color: #0f172a;
-}
-
-.sns-bar-fill.blue {
-  background: linear-gradient(90deg, #0284c7, var(--sns-blue));
+  font-weight: 800;
+  color: #ffffff;
 }
 
 .sns-bar-fill.coral {
-  background: linear-gradient(90deg, #ea580c, var(--sns-coral));
+  background: linear-gradient(90deg, #f97316, #ea580c);
 }
 
-/* 2. Seaborn Forest Plot (가설 검정 효과크기 및 CI) */
+.sns-bar-fill.blue {
+  background: linear-gradient(90deg, #38bdf8, #0284c7);
+}
+
+.sns-bar-fill.mocha {
+  background: linear-gradient(90deg, #a89485, #786455);
+}
+
+/* 2. 밝은 Seaborn Forest Plot */
 .forest-plot-container {
-  background: #0b1120;
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 16px 20px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 18px 22px;
   height: 100%;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.03);
 }
 
 .forest-row {
   display: grid;
-  grid-template-columns: 190px 1fr 140px;
+  grid-template-columns: 180px 1fr 130px;
   align-items: center;
-  gap: 16px;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  gap: 14px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .forest-label {
   font-size: 0.88rem;
-  font-weight: 600;
+  font-weight: 700;
+  color: var(--text-main);
 }
 
 .forest-axis-wrap {
@@ -365,25 +458,25 @@ body {
   align-items: center;
 }
 
-/* 기준선 0선 */
+/* 기준선 g=0 */
 .forest-zero-line {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 35%; /* g = 0 기준선 */
-  width: 1px;
-  background: var(--sns-red);
-  opacity: 0.6;
+  left: 35%;
+  width: 2px;
+  background: #ef4444;
+  opacity: 0.7;
   z-index: 1;
 }
 
 /* 95% CI 에러바 */
 .forest-error-bar {
   position: absolute;
-  height: 2px;
-  background: var(--sns-blue);
+  height: 3px;
+  background: var(--accent-blue);
   z-index: 2;
-  transform: scaleX(0); /* 모션 시작점 */
+  transform: scaleX(0);
   transform-origin: center;
 }
 
@@ -393,64 +486,83 @@ body {
   position: absolute;
   top: -4px;
   width: 2px;
-  height: 10px;
-  background: var(--sns-blue);
+  height: 11px;
+  background: var(--accent-blue);
 }
 .forest-error-bar::before { left: 0; }
 .forest-error-bar::after { right: 0; }
 
-/* 중심 점 (Point Estimate) */
+/* 포인트 점 */
 .forest-point {
   position: absolute;
-  width: 10px;
-  height: 10px;
-  background: #fff;
-  border: 2px solid var(--sns-blue);
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border: 3px solid var(--accent-blue);
   border-radius: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) scale(0); /* 모션 시작점 */
+  transform: translate(-50%, -50%) scale(0);
   z-index: 3;
 }
 
 .forest-point.insignificant {
-  border-color: var(--sns-gray);
-  background: #64748b;
+  border-color: #94a3b8;
+  background: #cbd5e1;
 }
 
 .forest-val-text {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-family: var(--font-mono);
   color: var(--text-secondary);
   text-align: right;
+  line-height: 1.3;
 }
 
-/* 3. Seaborn DID Line Plot (이중차분 꺾은선 플롯) */
-.did-chart-box {
-  background: #0b1120;
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 16px;
-  height: 100%;
-  position: relative;
+/* 3. CropArea0001 스타일 반원/원형 도넛 게이지 */
+.donut-circle-wrap {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-/* 4. 카운트업 통계 수치 하이라이트 */
+.donut-svg {
+  width: 130px;
+  height: 130px;
+  transform: rotate(-90deg);
+}
+
+.donut-bg {
+  fill: none;
+  stroke: #ede8e1;
+  stroke-width: 10;
+}
+
+.donut-progress {
+  fill: none;
+  stroke: var(--accent-coral);
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 314;
+  stroke-dashoffset: 314;
+}
+
+/* 4. 통계 수치 하이라이트 */
 .stat-metric {
   font-size: 2.6rem;
-  font-weight: 800;
+  font-weight: 900;
   font-family: var(--font-mono);
   line-height: 1.1;
   margin: 6px 0;
+  letter-spacing: -0.03em;
 }
 
-.stat-metric.blue { color: var(--sns-blue); }
-.stat-metric.coral { color: var(--sns-coral); }
-.stat-metric.purple { color: var(--sns-purple); }
-.stat-metric.green { color: var(--sns-green); }
+.stat-metric.blue { color: var(--accent-blue); }
+.stat-metric.coral { color: var(--accent-coral); }
+.stat-metric.mocha { color: var(--accent-primary); }
+.stat-metric.green { color: var(--accent-green); }
 
-/* 컨트롤 패널 버튼 */
+/* 컨트롤 패널 버튼 (밝은 글래스모피즘) */
 #deck-controls {
   position: fixed;
   bottom: 20px;
@@ -461,31 +573,33 @@ body {
 }
 
 .ctrl-btn {
-  background: rgba(30, 41, 59, 0.85);
-  border: 1px solid var(--border-color);
-  color: #fff;
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border-light);
+  color: var(--text-main);
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   font-size: 0.95rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(8px);
   transition: all 0.2s ease;
 }
 
 .ctrl-btn:hover {
-  background: var(--sns-blue);
-  color: #0f172a;
+  background: var(--bg-accent-block);
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 /* 단축키 도움말 모달 */
 #help-modal {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(35, 31, 29, 0.5);
   display: none;
   justify-content: center;
   align-items: center;
@@ -498,19 +612,20 @@ body {
 }
 
 .modal-content {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
+  background: #ffffff;
+  border: 1px solid var(--border-light);
   padding: 30px;
-  border-radius: 12px;
+  border-radius: 14px;
   max-width: 460px;
   width: 90%;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
 .modal-content h3 {
   margin-bottom: 16px;
   font-size: 1.25rem;
-  color: #fff;
+  color: var(--text-main);
+  font-weight: 800;
 }
 
 .shortcut-row {
@@ -522,10 +637,12 @@ body {
 }
 
 kbd {
-  background: #334155;
-  color: #fff;
-  padding: 2px 7px;
-  border-radius: 4px;
+  background: #ede8e1;
+  color: var(--text-main);
+  padding: 3px 8px;
+  border-radius: 5px;
   font-family: var(--font-mono);
   font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid rgba(0,0,0,0.06);
 }
