@@ -1,5 +1,5 @@
 /**
- * 학술제 HTML 슬라이드덱 - 모션그래픽 & 네비게이션 엔진 (with Anime.js)
+ * 학술제 HTML 슬라이드덱 - Warm Editorial & Minimal Motion Engine (with Anime.js)
  */
 
 class AcademicSlideDeck {
@@ -31,7 +31,7 @@ class AcademicSlideDeck {
     this.handleResize();
     window.addEventListener('resize', () => this.handleResize());
 
-    // 4. 초기 슬라이드 활성화 & 모션 트리거
+    // 4. 초기 슬라이드 활성화 & 모션 구동
     this.updateSlide(true);
   }
 
@@ -85,7 +85,7 @@ class AcademicSlideDeck {
       }
     });
 
-    // 컨트롤 버튼 클릭
+    // 화면 컨트롤 버튼
     const btnNext = document.getElementById('btn-next');
     const btnPrev = document.getElementById('btn-prev');
     const btnFullscreen = document.getElementById('btn-fullscreen');
@@ -113,8 +113,8 @@ class AcademicSlideDeck {
           if (window.anime) {
             anime({
               targets: targetFootnote,
-              backgroundColor: ['rgba(56, 189, 248, 0.4)', 'rgba(56, 189, 248, 0)'],
-              scale: [1.05, 1],
+              backgroundColor: ['#ffedd5', 'transparent'],
+              scale: [1.08, 1],
               duration: 1200,
               easing: 'easeOutQuad'
             });
@@ -184,30 +184,30 @@ class AcademicSlideDeck {
     // URL 해시 동기화
     window.location.hash = `slide-${this.currentIndex + 1}`;
 
-    // 모션그래픽 애니메이션 실행
+    // Anime.js 모션그래픽 실행
     this.playSlideMotions(currentSlide);
   }
 
   /**
-   * 해당 슬라이드 내의 모션그래픽 요소들을 Anime.js로 구동
+   * 슬라이드 내의 모션 요소들 실행 (Anime.js)
    */
   playSlideMotions(slideElem) {
     if (!window.anime) return;
 
-    // 1. 카드 Stagger 페이드업 모션
+    // 1. 카드 & 그리드 Stagger 업 애니메이션
     const cards = slideElem.querySelectorAll('.card, .stagger-item');
     if (cards.length > 0) {
       anime({
         targets: cards,
-        translateY: [24, 0],
+        translateY: [20, 0],
         opacity: [0, 1],
-        delay: anime.stagger(80, { start: 100 }),
-        duration: 600,
+        delay: anime.stagger(70, { start: 100 }),
+        duration: 650,
         easing: 'easeOutCubic'
       });
     }
 
-    // 2. Seaborn 가로 막대 차트 (Bar Graph) 모션
+    // 2. 가로 막대 차트 (Bar Graph) 모션
     const barFills = slideElem.querySelectorAll('.sns-bar-fill');
     if (barFills.length > 0) {
       barFills.forEach((bar) => {
@@ -222,14 +222,14 @@ class AcademicSlideDeck {
       });
     }
 
-    // 3. Seaborn Forest Plot (에러바 & 포인트) 모션
+    // 3. Forest Plot (에러바 & 포인트) 모션
     const errorBars = slideElem.querySelectorAll('.forest-error-bar');
     if (errorBars.length > 0) {
       anime({
         targets: errorBars,
         scaleX: [0, 1],
         duration: 800,
-        delay: anime.stagger(100, { start: 250 }),
+        delay: anime.stagger(90, { start: 250 }),
         easing: 'easeOutBack'
       });
     }
@@ -240,12 +240,12 @@ class AcademicSlideDeck {
         targets: forestPoints,
         scale: [0, 1],
         duration: 600,
-        delay: anime.stagger(100, { start: 400 }),
+        delay: anime.stagger(90, { start: 380 }),
         easing: 'easeOutBack'
       });
     }
 
-    // 4. 통계 수치 카운트업 (Number Count-up) 모션
+    // 4. 숫자 카운트업 (Number Count-up)
     const countMetrics = slideElem.querySelectorAll('[data-count-to]');
     countMetrics.forEach((elem) => {
       const targetVal = parseFloat(elem.getAttribute('data-count-to'));
@@ -267,7 +267,22 @@ class AcademicSlideDeck {
       });
     });
 
-    // 5. SVG 라인 드로잉 모션 (이중차분 DID 그래프 등)
+    // 5. CropArea0001 스타일 원형/반원 도넛 차트 스트로크 모션
+    const donutPaths = slideElem.querySelectorAll('.donut-progress');
+    donutPaths.forEach((donut) => {
+      const percent = parseFloat(donut.getAttribute('data-percent') || '0');
+      const circumference = 314; // 2 * PI * 50
+      const targetOffset = circumference - (circumference * percent / 100);
+      anime({
+        targets: donut,
+        strokeDashoffset: [circumference, targetOffset],
+        duration: 1200,
+        delay: 300,
+        easing: 'easeOutExpo'
+      });
+    });
+
+    // 6. SVG 라인 드로잉 모션 (이중차분 DID 그래프 등)
     const svgLines = slideElem.querySelectorAll('.motion-svg-line');
     if (svgLines.length > 0) {
       svgLines.forEach((line) => {
@@ -290,7 +305,7 @@ class AcademicSlideDeck {
         targets: svgDots,
         scale: [0, 1],
         duration: 500,
-        delay: anime.stagger(120, { start: 800 }),
+        delay: anime.stagger(100, { start: 800 }),
         easing: 'easeOutBack'
       });
     }
@@ -316,7 +331,7 @@ class AcademicSlideDeck {
   }
 }
 
-// 브라우저 초기화
+// 브라우저 로드 완료 시 인스턴스 실행
 document.addEventListener('DOMContentLoaded', () => {
   window.slideDeck = new AcademicSlideDeck();
 });
